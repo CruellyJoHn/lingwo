@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>领沃内部官网登录</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/font.css" rel="stylesheet">
+</head>
+<body>
+<div class="cotn_principal">
+    <div class="index_head">
+        <img src="images/logo.png">
+        <h2>领沃内部官网</h2>
+    </div>
+    <div class="cont_centrar">
+        <div class="cont_login">
+            <div class="cont_info_log_sign_up">
+                <div class="col_md_login">
+                    <div class="cont_ba_opcitiy">
+                        <h2>LOGIN</h2>
+                        <p>Welcome to our home.</p>
+                        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                    </div>
+                </div>
+                <div class="col_md_sign_up">
+                    <div class="cont_ba_opcitiy">
+                        <h2>SIGN UP</h2>
+                        <p>Firstly,you should sign up.</p>
+                        <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_back_info">
+                <div class="cont_img_back_grey"><img src="./images/po.jpg" alt=""></div>
+            </div>
+            <div class="cont_forms">
+                <div class="cont_img_back_"><img src="./images/po.jpg" alt=""></div>
+                <div class="cont_form_login" style="opacity: 0; display: none;"><a onclick="ocultar_login_sign_up()"><i
+                        class="material-icons"></i></a>
+                    <h2>LOGIN</h2>
+                    <input id="username" type="text" placeholder="Username">
+                    <input id="password" type="password" placeholder="Password">
+                    <button class="btn_login" onclick="login()">LOGIN</button>
+                </div>
+                <div class="cont_form_sign_up" style="display: none; opacity: 0;"><a
+                        onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
+                    <h2>SIGN UP</h2>
+                    <input id="re_email" type="text" placeholder="Email">
+                    <input id="re_username" type="text" placeholder="User">
+                    <input id="re_password" type="password" placeholder="Password">
+                    <input id="re_password_again" type="password" placeholder="Confirm Password">
+                    <button class="btn_sign_up" onclick="sign_up()">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./js/index.js"></script>
+</html>

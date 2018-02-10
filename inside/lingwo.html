@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>领沃内部官网</title>
+    <link type="text/css" rel="stylesheet" href="../css/lingwo.css">
+</head>
+
+<body aligen='center'>
+<p style="position: absolute;right: 20%;" onclick="logout()">logout</p>
+<div class="container">
+    <div class="wo_head">
+        <img class="img" src="../images/logo.png" height="80" width="150">
+        <ul class="wo_ul">
+            <li id="one">签到表</li>
+            <li id="two">经费流动</li>
+            <li id="three" onclick="url_blog()">blogs</li>
+            <li id="four">团队资产流动情况</li>
+        </ul>
+    </div>
+    <div class="clean"></div>
+    <div class="wo_body">
+        <div class="qiandao">
+            <table border="1" cellpadding="50" class="table">
+                <tr>
+                    <td id="1"><p>1</p></td>
+                    <td id="2"><p>2</p></td>
+                    <td id="3"><p>3</p></td>
+                    <td id="4"><p>4</p></td>
+                    <td id="5"><p>5</p></td>
+                    <td id="6"><p>6</p></td>
+                    <td id="0"><p>7</p></td>
+                </tr>
+            </table>
+            <button class="button">课表录入</button>
+        </div>
+        <div class="jingfei">
+            <h1 style="margin-left:40%">经费申请</h1>
+            <form action="" style="margin-left:40%;margin-top:50px;">
+                <label>用途：</label>
+                <input id="purpose" type="text">
+                <br><br><br>
+                <label>金额：</label>
+                <input  id="fund" type="text">
+                <br><br>
+                <input type="button" value="提交" style="margin-left:12%;" onclick="jingfei1()">
+            </form>
+        </div>
+        <div class="blog">
+            <ul class="wo_ul1">
+                <li class="CZK">泽坤的博客</li>
+                <li class="ZDS">丁盛的博客</li>
+                <li class="ZWT">文桃的博客</li>
+                <li class="QHT">华添的博客</li>
+                <li class="LZJ">忠键的博客</li>
+            </ul>
+            <ul class="blog_title" id="ZWT">
+                <li>3..............</li>
+                <li>..............</li>
+                <li>..............</li>
+                <li>..............</li>
+                <li>..............</li>
+            </ul>
+            <ul class="blog_title" id="QHT">
+                <li>4..............</li>
+                <li>..............</li>
+                <li>..............</li>
+                <li>..............</li>
+                <li>..............</li>
+            </ul>
+            <ul class="blog_title" id="LZJ">
+                <li>5..............</li>
+                <li>..............</li>
+                <li>..............</li>
+                <li>..............</li>
+                <li>..............</li>
+            </ul>
+        </div>
+        <div class="lend_return">
+            <div class="lend">
+                <h1 style="margin-left:40%">借用</h1>
+                <form action="" style="margin-left:40%;margin-top:50px;">
+                    <label>物品：</label>
+                    <input  id="lend_thing" type="text">
+                    <br><br><br>
+                    <label>借用目的：</label>
+                    <input  id="remark" type="text">
+                    <br><br><br>
+                    <!--<label>借用日期：</label>-->
+                    <!--<input  id="lend_day" type="text">-->
+                    <!--<br><br><br>-->
+                    <label>承诺归还日期：</label>
+                    <input  id="promise_date_of_return" type="text">
+                    <br><br>
+                    <input type="button" value="提交" style="margin-left:12%;" onclick="lend1()">
+                </form>
+            </div>
+            <div class="return">
+                <h1 style="margin-left:40%">归还</h1>
+                <form action="" style="margin-left:40%;margin-top:50px;">
+                    <label>物品：</label>
+                    <input  id="return_thing" type="text">
+                    <br><br><br>
+                    <!--<label>归还日期为：</label>-->
+                    <!--<input  id="date_of_return" type="text">-->
+                    <!--<br><br>-->
+                    <input type="button" value="提交" style="margin-left:12%;" onclick="return1()">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <h1>内部官网技术开发人员：</h1>
+        <p>前端：李俊华</p>
+        <p>后台php：苏基业</p>
+    </div>
+</footer>
+</body>
+<script src="../js/ajax.js"></script>
+<script src="../js/qiaodao.js"></script>
+<script src="../js/lingwo.js"></script>
+<script src="../js/PHP.js"></script>
+</html>

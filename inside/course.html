@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程录入</title>
+    <link type="text/css" rel="stylesheet" href="./css/course.css">
+</head>
+<body>
+<div class="container">
+    <div class="head">
+        <img class="img" src="C:\Users\HASEE\Desktop\HTML+PHP\Demo\insidenet\images\logo.png" height="80" width="150">
+        <h1>课程表录入</h1>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="body">
+    <table cellspacing="35px" ;>
+        <tr>
+            <th></th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+        </tr>
+        <tr>
+            <td>第一大节课：</td>
+            <td><input type="text" placeholder="請輸入" class="mon"></td>
+            <td><input type="text" placeholder="請輸入" class="tue"></td>
+            <td><input type="text" placeholder="請輸入" class="wed"></td>
+            <td><input type="text" placeholder="請輸入" class="thu"></td>
+            <td><input type="text" placeholder="請輸入" class="fri"></td>
+            <td><input type="text" placeholder="請輸入" class="sat"></td>
+        </tr>
+        <tr>
+            <td>第二大节课：</td>
+            <td><input type="text" placeholder="請輸入" class="mon"></td>
+            <td><input type="text" placeholder="請輸入" class="tue"></td>
+            <td><input type="text" placeholder="請輸入" class="wed"></td>
+            <td><input type="text" placeholder="請輸入" class="thu"></td>
+            <td><input type="text" placeholder="請輸入" class="fri"></td>
+            <td><input type="text" placeholder="請輸入" class="sat"></td>
+        </tr>
+        <tr>
+            <td>第三大节课：</td>
+            <td><input type="text" placeholder="請輸入" class="mon"></td>
+            <td><input type="text" placeholder="請輸入" class="tue"></td>
+            <td><input type="text" placeholder="請輸入" class="wed"></td>
+            <td><input type="text" placeholder="請輸入" class="thu"></td>
+            <td><input type="text" placeholder="請輸入" class="fri"></td>
+            <td><input type="text" placeholder="請輸入" class="sat"></td>
+        </tr>
+        <tr>
+            <td>第四大节课：</td>
+            <td><input type="text" placeholder="請輸入" class="mon"></td>
+            <td><input type="text" placeholder="請輸入" class="tue"></td>
+            <td><input type="text" placeholder="請輸入" class="wed"></td>
+            <td><input type="text" placeholder="請輸入" class="thu"></td>
+            <td><input type="text" placeholder="請輸入" class="fri"></td>
+            <td><input type="text" placeholder="請輸入" class="sat"></td>
+        </tr>
+        <tr>
+            <td>第五大节课：</td>
+            <td><input type="text" placeholder="請輸入" class="mon"></td>
+            <td><input type="text" placeholder="請輸入" class="tue"></td>
+            <td><input type="text" placeholder="請輸入" class="wed"></td>
+            <td><input type="text" placeholder="請輸入" class="thu"></td>
+            <td><input type="text" placeholder="請輸入" class="fri"></td>
+            <td><input type="text" placeholder="請輸入" class="sat"></td>
+        </tr>
+    </table>
+    <input id="button" type="button" value="提交" style="margin-left: 90%;">
+</div>
+
+</body>
+<script>
+    var button = document.getElementById('button');
+    button.addEventListener("click", () => {
+        var mon = document.getElementsByClassName("mon");
+        tue = document.getElementsByClassName("tue"),
+            wed = document.getElementsByClassName("wed"),
+            thu = document.getElementsByClassName("thu"),
+            fri = document.getElementsByClassName("fri"),
+            sat = document.getElementsByClassName("sat");
+        var course = JSON.stringify({
+            mon: {
+                fir: mon[0].value,
+                sec: mon[1].value,
+                thi: mon[2].value,
+                fou: mon[3].value,
+                fif: mon[4].value
+            },
+            tue: {
+                fir: tue[0].value,
+                sec: tue[1].value,
+                thi: tue[2].value,
+                fou: tue[3].value,
+                fif: tue[4].value
+            },
+            wed: {
+                fir: wed[0].value,
+                sec: wed[1].value,
+                thi: wed[2].value,
+                fou: wed[3].value,
+                fif: wed[4].value
+            },
+            thu: {
+                fir: thu[0].value,
+                sec: thu[1].value,
+                thi: thu[2].value,
+                fou: thu[3].value,
+                fif: thu[4].value
+            },
+            fri: {
+                fir: fri[0].value,
+                sec: fri[1].value,
+                thi: fri[2].value,
+                fou: fri[3].value,
+                fif: fri[4].value
+            },
+            sat: {
+                fir: sat[0].value,
+                sec: sat[1].value,
+                thi: sat[2].value,
+                fou: sat[3].value,
+                fif: sat[4].value
+            }
+        });
+
+        //课表录入
+
+        //ajax
+        function ajax(url,fun){
+            var xmlhttp;
+            if(window.XMLHttpRequest){
+                xmlhttp=new XMLHttpRequest();
+            }
+            else{
+                xmlhttp=new ActiveXObject();
+            }
+
+            xmlhttp.onreadystatechange=fun;
+            xmlhttp.open("post",url,true);
+            xmlhttp.send();
+        }
+
+            function course_ajax1() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    alert("签到成功！");
+                }
+                else if (xmlhttp.status == 404) {
+                    alert("你人太丑，签退失败！")
+                }
+            }
+
+            let url = "req/return.php?course=" + course;
+            ajax(url, course_ajax1);
+    });
+
+
+</script>
+</html>

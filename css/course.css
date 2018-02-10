@@ -1,0 +1,34 @@
+.img{
+    float: left;
+    margin-left: 15%;
+    letter-spacing: .2em;
+}
+
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.head > h1{
+    float: left;
+    margin-left: 15%;
+}
+
+.clear{
+    clear: both;
+}
+
+form{
+    margin-top: 70px;
+    line-height: 60px;
+    margin-left: 20%;
+}
+
+table{
+    line-height: 3em;
+}
+
+.body{
+    max-width: 1500px;
+    margin: 0 auto;
+}
